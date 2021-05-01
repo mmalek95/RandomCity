@@ -19,6 +19,11 @@ ext {
             junit                           : "4.13.2",
             extJunit                        : "1.1.2",
             espressoCore                    : "3.3.0",
-            navigationComponent             : "2.3.5"
+            navigationComponent             : "2.3.5",
+            dagger                          : "2.31.2",
+            daggerCompiler                  : "2.35.1",
+            daggerAndroid                   : "2.35.1",
+            daggerAndroidCompiler           : "2.35.1",
+            fragmentExtensions              : "1.3.3"
     ]
 }

@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -43,6 +45,12 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:$dependenciesVersion.constraintlayout"
     implementation "androidx.navigation:navigation-fragment-ktx:$dependenciesVersion.navigationComponent"
     implementation "androidx.navigation:navigation-ui-ktx:$dependenciesVersion.navigationComponent"
+    implementation "androidx.fragment:fragment-ktx:$dependenciesVersion.fragmentExtensions"
+
+    implementation "com.google.dagger:dagger:$dependenciesVersion.dagger"
+    kapt "com.google.dagger:dagger-compiler:$dependenciesVersion.daggerCompiler"
+    implementation "com.google.dagger:dagger-android-support:$dependenciesVersion.daggerAndroid"
+    kapt "com.google.dagger:dagger-android-processor:$dependenciesVersion.daggerAndroidCompiler"
 
     testImplementation "junit:junit:$dependenciesVersion.junit"
     androidTestImplementation "androidx.test.ext:junit:$dependenciesVersion.extJunit"

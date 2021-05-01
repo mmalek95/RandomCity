@@ -8,9 +8,9 @@
     tools:context=".ui.list.CityListFragment">
 
     <TextView
+        android:id="@+id/randomCityTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/city_list_fragment_title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

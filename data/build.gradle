@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -36,4 +37,9 @@ dependencies {
     implementation project(':domain')
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$toolsVersion.kotlin"
+
+    implementation "com.google.dagger:dagger:$dependenciesVersion.dagger"
+    kapt "com.google.dagger:dagger-compiler:$dependenciesVersion.daggerCompiler"
+    implementation "com.google.dagger:dagger-android-support:$dependenciesVersion.daggerAndroid"
+    kapt "com.google.dagger:dagger-android-processor:$dependenciesVersion.daggerAndroidCompiler"
 }
