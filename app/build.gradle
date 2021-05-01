@@ -39,6 +39,8 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$dependenciesVersion.appcompat"
     implementation "com.google.android.material:material:$dependenciesVersion.material"
     implementation "androidx.constraintlayout:constraintlayout:$dependenciesVersion.constraintlayout"
+    implementation "androidx.navigation:navigation-fragment-ktx:$dependenciesVersion.navigationComponent"
+    implementation "androidx.navigation:navigation-ui-ktx:$dependenciesVersion.navigationComponent"
 
     testImplementation "junit:junit:$dependenciesVersion.junit"
     androidTestImplementation "androidx.test.ext:junit:$dependenciesVersion.extJunit"
