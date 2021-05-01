@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RandomCityApp</string>
+    <string name="splash_activity_title">Splash Activity!</string>
 </resources>
