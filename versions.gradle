@@ -1,6 +1,7 @@
 ext {
     toolsVersion = [
             kotlin                          : "1.4.32",
+            kotlinCoroutines                : "1.4.1",
             gradle                          : "4.1.2"
     ]
 
@@ -24,6 +25,10 @@ ext {
             daggerCompiler                  : "2.35.1",
             daggerAndroid                   : "2.35.1",
             daggerAndroidCompiler           : "2.35.1",
-            fragmentExtensions              : "1.3.3"
+            fragmentExtensions              : "1.3.3",
+            room                            : "2.3.0",
+            mapstruct                       : "1.4.2.Final",
+            lifecycleExtensions             : "2.2.0",
+            lifecycle                       : "2.3.1"
     ]
 }

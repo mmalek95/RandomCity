@@ -46,6 +46,8 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$dependenciesVersion.navigationComponent"
     implementation "androidx.navigation:navigation-ui-ktx:$dependenciesVersion.navigationComponent"
     implementation "androidx.fragment:fragment-ktx:$dependenciesVersion.fragmentExtensions"
+    implementation "androidx.lifecycle:lifecycle-extensions:$dependenciesVersion.lifecycleExtensions"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$dependenciesVersion.lifecycle"
 
     implementation "com.google.dagger:dagger:$dependenciesVersion.dagger"
     kapt "com.google.dagger:dagger-compiler:$dependenciesVersion.daggerCompiler"

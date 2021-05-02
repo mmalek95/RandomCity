@@ -1,6 +1,9 @@
 package com.malek.randomcityapp.core.di
 
+import com.malek.data.di.DatabaseModule
+import com.malek.data.di.MappersModule
 import com.malek.data.di.ProvidersModule
+import com.malek.data.di.RepositoriesModule
 import com.malek.randomcityapp.core.app.RandomCityApplication
 import dagger.BindsInstance
 import dagger.Component
@@ -17,7 +20,10 @@ import javax.inject.Singleton
         ActivitiesInjector::class,
         //domain
         //data
-        ProvidersModule::class
+        DatabaseModule::class,
+        ProvidersModule::class,
+        RepositoriesModule::class,
+        MappersModule::class
     ]
 )
 interface ApplicationComponent: AndroidInjector<RandomCityApplication> {

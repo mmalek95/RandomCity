@@ -42,4 +42,11 @@ dependencies {
     kapt "com.google.dagger:dagger-compiler:$dependenciesVersion.daggerCompiler"
     implementation "com.google.dagger:dagger-android-support:$dependenciesVersion.daggerAndroid"
     kapt "com.google.dagger:dagger-android-processor:$dependenciesVersion.daggerAndroidCompiler"
+
+    api "androidx.room:room-runtime:$dependenciesVersion.room"
+    implementation "androidx.room:room-ktx:$dependenciesVersion.room"
+    kapt "androidx.room:room-compiler:$dependenciesVersion.room"
+
+    implementation "org.mapstruct:mapstruct:$dependenciesVersion.mapstruct"
+    kapt "org.mapstruct:mapstruct-processor:$dependenciesVersion.mapstruct"
 }
