@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.malek.randomcityapp.core.viewmodels.ViewModelFactory
 import com.malek.randomcityapp.core.viewmodels.ViewModelKey
+import com.malek.randomcityapp.ui.list.viewmodels.CityListViewModel
 import com.malek.randomcityapp.ui.main.viewmodels.MainViewModel
 import com.malek.randomcityapp.ui.splash.viewmodels.SplashViewModel
 import dagger.Binds
@@ -25,4 +26,10 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(MainViewModel::class)
     abstract fun mainViewModel(viewModel: MainViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(CityListViewModel::class)
+    abstract fun cityListViewModel(viewModel: CityListViewModel): ViewModel
+
 }

@@ -4,6 +4,7 @@ import com.malek.data.di.DatabaseModule
 import com.malek.data.di.MappersModule
 import com.malek.data.di.ProvidersModule
 import com.malek.data.di.RepositoriesModule
+import com.malek.domain.di.UseCasesModule
 import com.malek.randomcityapp.core.app.RandomCityApplication
 import dagger.BindsInstance
 import dagger.Component
@@ -20,6 +21,7 @@ import javax.inject.Singleton
         ActivitiesInjector::class,
         ViewModelModule::class,
         //domain
+        UseCasesModule::class,
         //data
         DatabaseModule::class,
         ProvidersModule::class,

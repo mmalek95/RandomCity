@@ -1,6 +1,6 @@
 package com.malek.randomcityapp.ui.main.di
 
-import com.malek.randomcityapp.ui.list.CityListFragment
+import com.malek.randomcityapp.ui.list.fragments.CityListFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
