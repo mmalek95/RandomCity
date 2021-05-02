@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.malek.domain.models.RandomCity
 import com.malek.randomcityapp.R
 import com.malek.randomcityapp.core.ui.BaseFragment
+import com.malek.randomcityapp.ui.list.adapters.RandomCityAdapter
 import com.malek.randomcityapp.ui.list.viewmodels.CityListViewModel
 import kotlinx.android.synthetic.main.fragment_city_list.*
 
@@ -20,6 +22,9 @@ class CityListFragment : BaseFragment() {
     lateinit var viewModelFactory: ViewModelProvider.Factory
     private val viewModel: CityListViewModel by viewModels { viewModelFactory }
 
+    private val adapter: RandomCityAdapter
+        get() = randomCitiesRecyclerView.adapter as RandomCityAdapter
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -27,23 +32,25 @@ class CityListFragment : BaseFragment() {
         return inflater.inflate(R.layout.fragment_city_list, container, false)
     }
 
-    val str = StringBuilder()
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         initLiveDataObservers()
+        setupRecyclerView()
     }
 
     private fun initLiveDataObservers() {
         viewModel.randomCities.observe(viewLifecycleOwner, Observer {
-            it.forEach {
-                str.append(it?.name.orEmpty() + " ")
-            }
-
-            randomCityTextView.text = str.toString()
-            str.clear()
+            adapter.submitList(it)
         })
+    }
+
+    private fun setupRecyclerView() {
+        randomCitiesRecyclerView.adapter = RandomCityAdapter(this::onRandomCitySelected)
+    }
+
+    private fun onRandomCitySelected(city: RandomCity) {
+
     }
 
 }
