@@ -13,7 +13,7 @@
 
         <activity android:name=".ui.main.activities.MainActivity" />
 
-        <activity android:name=".ui.splash.SplashActivity">
+        <activity android:name=".ui.splash.activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
