@@ -21,7 +21,7 @@ class SplashViewModel @Inject constructor(private val generateRandomCitiesUseCas
         generateRandomCity()
     }
 
-    fun generateRandomCity() {
+    private fun generateRandomCity() {
         viewModelScope.launch {
             generateRandomCitiesUseCase
                 .startGeneratingRandomCities()
