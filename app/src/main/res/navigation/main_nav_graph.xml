@@ -9,5 +9,18 @@
         android:id="@+id/cityListFragment"
         android:name="com.malek.randomcityapp.ui.list.fragments.CityListFragment"
         android:label="fragment_city_list"
-        tools:layout="@layout/fragment_city_list" />
+        tools:layout="@layout/fragment_city_list" >
+
+        <action
+            android:id="@+id/action_cityListFragment_to_randomCityDetailsFragment"
+            app:destination="@id/randomCityDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/randomCityDetailsFragment"
+        android:name="com.malek.randomcityapp.ui.details.fragments.RandomCityDetailsFragment"
+        android:label="RandomCityDetailsFragment"
+        tools:layout="@layout/fragment_city_details">
+
+    </fragment>
 </navigation>

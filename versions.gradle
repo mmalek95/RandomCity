@@ -1,8 +1,7 @@
 ext {
     toolsVersion = [
             kotlin                          : "1.4.32",
-            kotlinCoroutines                : "1.4.1",
-            gradle                          : "4.1.2"
+            gradle                          : "4.1.2",
     ]
 
     androidSdkVersion = [
@@ -29,6 +28,9 @@ ext {
             room                            : "2.3.0",
             mapstruct                       : "1.4.2.Final",
             lifecycleExtensions             : "2.2.0",
-            lifecycle                       : "2.3.1"
+            lifecycle                       : "2.3.1",
+            leakCanary                      : "2.5",
+            mapSdk                          : "17.0.1",
+            kotlinCoroutines                : "1.4.1",
     ]
 }

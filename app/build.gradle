@@ -17,6 +17,8 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [ MAPS_API_KEY:getApiKey()]
     }
 
     buildTypes {
@@ -35,6 +37,12 @@ android {
     buildFeatures {
         dataBinding true
     }
+}
+
+def getApiKey() { //FOR USAGE CREATE apikeys.properties FILE IN ROOT FOLDER AND ADD KEY IN THIS FORMAT MAPS_API_KEY=TEST_API_KEY
+    def Properties props = new Properties()
+    props.load(new FileInputStream(new File('apikeys.properties')))
+    return props['MAPS_API_KEY']
 }
 
 dependencies {
@@ -60,4 +68,7 @@ dependencies {
     testImplementation "junit:junit:$dependenciesVersion.junit"
     androidTestImplementation "androidx.test.ext:junit:$dependenciesVersion.extJunit"
     androidTestImplementation "androidx.test.espresso:espresso-core:$dependenciesVersion.espressoCore"
+
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:$dependenciesVersion.leakCanary"
+    implementation "com.google.android.gms:play-services-maps:$dependenciesVersion.mapSdk"
 }

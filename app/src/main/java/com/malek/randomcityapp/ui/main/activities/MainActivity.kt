@@ -1,6 +1,7 @@
 package com.malek.randomcityapp.ui.main.activities
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.malek.randomcityapp.R
@@ -29,5 +30,15 @@ class MainActivity : BaseActivity() {
         super.onPause()
 
         viewModel.stopGeneratingRandomCities()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressed()
+                true
+            }
+            else -> false
+        }
     }
 }

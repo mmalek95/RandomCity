@@ -13,8 +13,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$toolsVersion.kotlin"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$toolsVersion.kotlinCoroutines"
 
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$dependenciesVersion.kotlinCoroutines"
     implementation "com.google.dagger:dagger:$dependenciesVersion.dagger"
     kapt "com.google.dagger:dagger-compiler:$dependenciesVersion.daggerCompiler"
 }
