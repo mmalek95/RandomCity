@@ -19,9 +19,9 @@ open class BaseFragment: DaggerFragment() {
         }
     }
 
-    protected open fun setupActionBar(actionBar: ActionBar) = clearActionBar(actionBar)
+    protected open fun setupActionBar(actionBar: ActionBar) = restoreActionBarToDefault(actionBar)
 
-    private fun clearActionBar(actionBar: ActionBar) {
+    private fun restoreActionBarToDefault(actionBar: ActionBar) {
         with(actionBar) {
             title = getString(R.string.app_name)
             setDisplayHomeAsUpEnabled(false)

@@ -61,7 +61,7 @@ public class RandomCityAdapter extends ListAdapter<RandomCity, RandomCityAdapter
 
         @Override
         public boolean areItemsTheSame(@NonNull RandomCity oldItem, @NonNull RandomCity newItem) {
-            return oldItem.getCreationTimeStampInMillis() == newItem.getCreationTimeStampInMillis();
+            return oldItem.getDbId() == newItem.getDbId();
         }
 
         @Override
