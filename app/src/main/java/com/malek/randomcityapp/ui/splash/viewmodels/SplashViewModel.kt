@@ -17,6 +17,10 @@ class SplashViewModel @Inject constructor(private val generateRandomCitiesUseCas
     private val _finishSplashEvent = MutableLiveData<Event<RandomCity>>()
     val finishSplashEvent: LiveData<Event<RandomCity>> = _finishSplashEvent
 
+    init {
+        generateRandomCity()
+    }
+
     fun generateRandomCity() {
         viewModelScope.launch {
             generateRandomCitiesUseCase
