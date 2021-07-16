@@ -48,8 +48,9 @@ jobs:
       - name: Instrumentation Tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 29
-          script: ./gradlew connectedAndroidTest
+          api-level: 30
+          emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot-load -noaudio -no-boot-anim
+          disable-animations: true
         
       - name: Archive build artifacts
         uses: actions/upload-artifact@v2
