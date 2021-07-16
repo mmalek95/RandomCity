@@ -49,8 +49,9 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 30
-          emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot-load -noaudio -no-boot-anim
+          emulator-options: -no-window -no-snapshot-load -noaudio -no-boot-anim
           disable-animations: true
+          script: ./gradlew connectedAndroidTest
         
       - name: Archive build artifacts
         uses: actions/upload-artifact@v2
