@@ -45,8 +45,18 @@ jobs:
       - name: Unit tests
         run: ./gradlew test
         
-      - name: Instrumentation Tests
-        uses: reactivecircus/android-emulator-runner@v2
+      - name: Archive build artifacts
+        uses: actions/upload-artifact@v2
         with:
-          api-level: 29
-          script: ./gradlew connectedAndroidTest
+          name: android APK
+          path: app/build/outputs/apk/debug/*
+          
+      - name: upload artefact to App Center
+        uses: wzieba/AppCenter-Github-Action@v1
+        with:
+          appName: maciej.malek-netguru.com/TEst
+          token: ${{ secrets.APPCENTER }}
+          group: Collaborators
+          file: app/build/outputs/apk/debug/app-debug.apk
+          notifyTesters: true
+          debug: true
