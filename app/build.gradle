@@ -61,6 +61,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$dependenciesVersion.lifecycle"
 
     implementation "com.google.dagger:dagger:$dependenciesVersion.dagger"
+    androidTestImplementation 'androidx.test:rules:1.3.0'
     kapt "com.google.dagger:dagger-compiler:$dependenciesVersion.daggerCompiler"
     implementation "com.google.dagger:dagger-android-support:$dependenciesVersion.daggerAndroid"
     kapt "com.google.dagger:dagger-android-processor:$dependenciesVersion.daggerAndroidCompiler"

@@ -49,4 +49,8 @@ dependencies {
 
     implementation "org.mapstruct:mapstruct:$dependenciesVersion.mapstruct"
     kapt "org.mapstruct:mapstruct-processor:$dependenciesVersion.mapstruct"
+
+    testImplementation "junit:junit:$dependenciesVersion.junit"
+    androidTestImplementation "androidx.test.ext:junit:$dependenciesVersion.extJunit"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$dependenciesVersion.espressoCore"
 }
