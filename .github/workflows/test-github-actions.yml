@@ -30,11 +30,23 @@ jobs:
         with:
           java-version: 1.8
 
-      - name: get file with properties
+      - name: get file with external properties
         run: echo "${{ secrets.EXTERNAL_PROPS_FILE }}" | base64 -d > apikeys.properties
+ 
+      - name: display content of external props
+        run: cat apikeys.properties
  
       - name: Make gradlew executable
         run: chmod +x ./gradlew
           
       - name: Build the app
         run: ./gradlew assembleDebug
+
+      - name: Unit tests
+        run: ./gradlew test
+        
+      - name: Instrumentation Tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 29
+          script: ./gradlew connectedAndroidTest
