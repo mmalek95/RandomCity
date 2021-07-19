@@ -15,7 +15,7 @@ jobs:
       - android/restore-build-cache
       - run:
           name: decode api keys
-          command: echo { EXTERNAL_PROPS_FILE } | base64 -d > apikeys.properties
+          command: echo ${EXTERNAL_PROPS_FILE} | base64 -d > apikeys.properties
       - run:
           name: execute tests
           command: |
