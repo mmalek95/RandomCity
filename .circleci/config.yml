@@ -14,7 +14,10 @@ jobs:
       - android/restore-gradle-cache
       - android/restore-build-cache
       - run:
-          name: Save test results
+          name: decode api keys
+          command: echo "${{ EXTERNAL_PROPS_FILE }}" | base64 -d > apikeys.properties
+      - run:
+          name: execute tests
           command: |
             sudo chmod +x ./gradlew
             ./gradlew test 
